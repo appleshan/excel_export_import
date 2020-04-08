@@ -20,11 +20,13 @@ import java.util.*;
  * Created by zhangyuanxin on 2016/3/23.
  */
 public class Test {
-    public static void main(String[] args) throws FileImportException, FileNotFoundException, FileExportException, URISyntaxException {
+    public static void main(String[] args)
+            throws FileImportException, FileNotFoundException, FileExportException, URISyntaxException {
 
-        testImport();
+//        testImport();
 //        URL u = Test.class.getResource("import/config.xml");
 //        System.out.println(u.toString());
+
         testExport();
     }
 
@@ -65,7 +67,8 @@ public class Test {
      * @throws FileExportException
      */
     public static void testExport() throws FileNotFoundException, FileExportException {
-        ExportConfig exportConfig = ExportConfigFactory.getExportConfig(Test.class.getResourceAsStream("export/exportconfig.xml"));
+        ExportConfig exportConfig = ExportConfigFactory.getExportConfig(
+                Test.class.getResourceAsStream("export/exportconfig.xml"));
         //map也可以换成一个实体类
         List<Map> lists = new LinkedList<>();
         for (int i = 0; i < 10; i++) {
@@ -81,9 +84,9 @@ public class Test {
         //输出文件在d盘根目录，系统是win
 //        OutputStream outputStream = new FileOutputStream("d://output.xlsx");
         //系统mac
-        OutputStream outputStream = new FileOutputStream("output.xlsx");
+        File outfile = new File("/home/appleshan/kphealth/tmp/output.xls");
+        OutputStream outputStream = new FileOutputStream(outfile);
         exportResult.export(outputStream);
-
     }
 
     /**
