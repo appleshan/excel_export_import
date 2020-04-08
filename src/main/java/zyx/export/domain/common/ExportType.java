@@ -4,8 +4,10 @@ package zyx.export.domain.common;
  * Created by stark.zhang on 2015/11/12.
  */
 public enum ExportType {
-    EXCEL2007(0, "xlsx", "application/vnd.ms-excel"),
-    CSV(1, "csv", "application/csv");
+    EXCEL2003(0, "xls", "application/vnd.ms-excel"),
+    EXCEL2007(1, "xlsx", "application/vnd.ms-excel"),
+    CSV(2, "csv", "application/csv");
+
     private final String fileType;
     private final int number;
     private final String contentType;

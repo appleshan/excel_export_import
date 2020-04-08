@@ -16,9 +16,10 @@ import java.util.Map;
 /**
  * Created by stark.zhang on 2015/11/6.
  */
-public class ExcelExportor implements IFileExportor {
+public class Excel2007Exportor implements IFileExportor {
     @Override
     public Workbook getExportResult(List<?> data, List<ExportCell> exportCells) throws FileExportException {
+        // XSSFWorkbook used for .xslx (>=2007), HSSFWorkbook for 03 .xls
         Workbook workbook = new XSSFWorkbook();
         Sheet sheet = workbook.createSheet();
         Row titleRow = sheet.createRow(0);
