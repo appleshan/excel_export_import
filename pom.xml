@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>zyx</groupId>
-    <artifactId>excel</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <groupId>com.github.appleshan</groupId>
+    <artifactId>excel_export_import</artifactId>
+    <version>2020.04.08-SNAPSHOT</version>
     <dependencies>
         <!--parse excel api-->
         <dependency>
